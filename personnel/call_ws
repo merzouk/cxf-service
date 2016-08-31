@@ -1,0 +1,5 @@
+http://localhost:8080/cxfJaxws/services/serviceSoapUser?wsdl
+
+http://localhost:8585/cxfJaxws/services/serviceSoapUser?wsdl
+
+http://192.168.1.45:8080/cxfJaxws/services/serviceSoapUser?wsdl

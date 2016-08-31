@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+	<appender name="STDOUTLocal" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %X{requestor}
+				%X{resource} %logger{80} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="LOGOUT"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/home/ryan/logs/cxf/jaxws/logout.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- daily rollover -->
+			<fileNamePattern>/home/ryan/logs/cxf/jaxws/logout.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<!-- keep 14 days' worth of history -->
+			<maxHistory>14</maxHistory>
+		</rollingPolicy>
+
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %X{requestor}
+				%X{resource} %logger{80} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="org.hibernate" level="warn" />
+
+	<logger name="com" level="${logs.level}">
+		<appender-ref ref="LOGOUT" />
+	</logger>
+
+	<root level="${logs.level}">
+		<appender-ref ref="STDOUTLocal" />
+	</root>
+
+	<logger name="org.ws.service" level="${logs.level}">
+		<appender-ref ref="LOGOUT" />
+	</logger>
+
+	<logger name="org.service.impl" level="${logs.level}">
+		<appender-ref ref="LOGOUT" />
+	</logger>
+
+	<logger name="org.dao.impl" level="${logs.level}">
+		<appender-ref ref="LOGOUT" />
+	</logger>
+
+
+</configuration>
