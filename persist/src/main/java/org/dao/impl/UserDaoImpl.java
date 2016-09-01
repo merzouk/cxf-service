@@ -54,7 +54,7 @@ import org.springframework.stereotype.Repository;
  * @date    : 4 sept. 2014 10:40:15
  */
 @Repository("userDao")
-public class UserDaoImpl implements UserDao
+public class UserDaoImpl extends GenericDao  implements UserDao
 {
    private static final Logger logger = LoggerFactory.getLogger( UserDaoImpl.class );
    
@@ -219,47 +219,5 @@ public class UserDaoImpl implements UserDao
          models.add( toModel( entity ) );
       }
       return models;
-   }
-   
-   //   private EntityManager getEntityManager()
-   //   {
-   //      Map<String, String> dbProps = new HashMap<String, String>();
-   //      dbProps.put( "eclipselink.logging.level", appConf.get( "eclipselink.logging.level", "INFO" ).toString() );
-   //      // On linux, the GSSAPI is not available. Use a default user/password  
-   //      // pair to connect                                                      
-   //      if( "Linux".equals( System.getProperty( "os.name" ) ) )
-   //      {
-   //         dbProps.put( "javax.persistence.jdbc.url", String.format( "jdbc:jtds:sqlserver://%s/%s", appConf.get( "db.host", "my-default-host" ), appConf.get( "db.database", "my-default-db" ) ) );
-   //         dbProps.put( "javax.persistence.jdbc.driver", "net.sourceforge.jtds.jdbc.Driver" );
-   //         dbProps.put( "javax.persistence.jdbc.password", appConf.get( "db.password" ).toString() );
-   //         dbProps.put( "javax.persistence.jdbc.user", appConf.get( "db.user", "my-default-username" ).toString() );
-   //      }
-   //      else
-   //      {
-   //         dbProps.put( "javax.persistence.jdbc.url", String.format( "jdbc:sqlserver://%s;databaseName=%s;integratedSecurity=true", appConf.get( "db.host", "my-default-host" ), appConf.get( "db.database", "my-default-db" ) ) );
-   //         dbProps.put( "javax.persistence.jdbc.driver", "com.microsoft.sqlserver.jdbc.SQLServerDriver" );
-   //      }
-   //      appConf.flush();
-   //      EntityManagerFactory fact = Persistence.createEntityManagerFactory( "myTestPU", dbProps );
-   //      return fact.createEntityManager();
-   //   }
-   /**
-    * 
-    * @param persistenceUnitName
-    * @return
-    */
-   private EntityManager getEntityManager( String persistenceUnitName, String dataBaseName )
-   {
-      Map<String, String> properties = new HashMap<String, String>();
-      properties.put( "javax.persistence.jdbc.user", IntPropertiesReader.getValueByKey( IntPropertiesReader.USER ) );
-      properties.put( "javax.persistence.jdbc.password", IntPropertiesReader.getValueByKey( IntPropertiesReader.PASSWORD ) );
-      properties.put( "javax.persistence.jdbc.url", IntPropertiesReader.getValueByKey( IntPropertiesReader.JDBC ) + "/" + dataBaseName );
-      properties.put( "javax.persistence.jdbc.driver", IntPropertiesReader.getValueByKey( IntPropertiesReader.DRIVER ) );
-      properties.put( "hibernate.dialect", IntPropertiesReader.getValueByKey( IntPropertiesReader.DIALECT ) );
-      properties.put( "eclipselink.jdbc.exclusive-connection.mode", IntPropertiesReader.getValueByKey( IntPropertiesReader.TRASACTIONAL ) );
-      properties.put( "eclipselink.jdbc.exclusive-connection.is-lazy", IntPropertiesReader.getValueByKey( IntPropertiesReader.ISLAZY ) );
-      EntityManagerFactory emf = Persistence.createEntityManagerFactory( persistenceUnitName, properties );
-      EntityManager em = emf.createEntityManager();
-      return em;
    }
 }

@@ -53,7 +53,7 @@ import org.springframework.stereotype.Repository;
  * @date    : 7 sept. 2014 14:05:58
  */
 @Repository("inscriptionDao")
-public class InscriptionDaoImpl implements InscriptionDao
+public class InscriptionDaoImpl extends GenericDao  implements InscriptionDao
 {
  private static final Logger logger = LoggerFactory.getLogger( InscriptionDaoImpl.class );
    
@@ -214,24 +214,5 @@ public class InscriptionDaoImpl implements InscriptionDao
          models.add( toModel( entity ) );
       }
       return models;
-   }
-   /**
-    * 
-    * @param persistenceUnitName
-    * @return
-    */
-   private EntityManager getEntityManager( String persistenceUnitName, String dataBaseName )
-   {
-      Map<String, String> properties = new HashMap<String, String>();
-      properties.put( "javax.persistence.jdbc.user", IntPropertiesReader.getValueByKey( IntPropertiesReader.USER ) );
-      properties.put( "javax.persistence.jdbc.password", IntPropertiesReader.getValueByKey( IntPropertiesReader.PASSWORD ) );
-      properties.put( "javax.persistence.jdbc.url", IntPropertiesReader.getValueByKey( IntPropertiesReader.JDBC ) + "/" + dataBaseName );
-      properties.put( "javax.persistence.jdbc.driver", IntPropertiesReader.getValueByKey( IntPropertiesReader.DRIVER ) );
-      properties.put( "hibernate.dialect", IntPropertiesReader.getValueByKey( IntPropertiesReader.DIALECT ) );
-      properties.put( "eclipselink.jdbc.exclusive-connection.mode", IntPropertiesReader.getValueByKey( IntPropertiesReader.TRASACTIONAL ) );
-      properties.put( "eclipselink.jdbc.exclusive-connection.is-lazy", IntPropertiesReader.getValueByKey( IntPropertiesReader.ISLAZY ) );
-      EntityManagerFactory emf = Persistence.createEntityManagerFactory( persistenceUnitName, properties );
-      EntityManager em = emf.createEntityManager();
-      return em;
    }
 }

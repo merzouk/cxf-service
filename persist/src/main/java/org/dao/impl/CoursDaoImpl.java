@@ -26,16 +26,11 @@
 package org.dao.impl;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
 import org.dao.CoursDao;
-import org.dao.commons.IntPropertiesReader;
 import org.entity.CoursEntity;
 import org.exception.CoursException;
 import org.model.Cours;
@@ -53,7 +48,7 @@ import org.springframework.stereotype.Repository;
  * @date    : 7 sept. 2014 14:01:20
  */
 @Repository("coursDao")
-public class CoursDaoImpl implements CoursDao
+public class CoursDaoImpl extends GenericDao implements CoursDao
 {
    private static final Logger logger = LoggerFactory.getLogger( CoursDaoImpl.class );
    
@@ -203,25 +198,5 @@ public class CoursDaoImpl implements CoursDao
          models.add( toModel( entity ) );
       }
       return models;
-   }
-   
-   /**
-    * 
-    * @param persistenceUnitName
-    * @return
-    */
-   private EntityManager getEntityManager( String persistenceUnitName, String dataBaseName )
-   {
-      Map<String, String> properties = new HashMap<String, String>();
-      properties.put( "javax.persistence.jdbc.user", IntPropertiesReader.getValueByKey( IntPropertiesReader.USER ) );
-      properties.put( "javax.persistence.jdbc.password", IntPropertiesReader.getValueByKey( IntPropertiesReader.PASSWORD ) );
-      properties.put( "javax.persistence.jdbc.url", IntPropertiesReader.getValueByKey( IntPropertiesReader.JDBC ) + "/" + dataBaseName );
-      properties.put( "javax.persistence.jdbc.driver", IntPropertiesReader.getValueByKey( IntPropertiesReader.DRIVER ) );
-      properties.put( "hibernate.dialect", IntPropertiesReader.getValueByKey( IntPropertiesReader.DIALECT ) );
-      properties.put( "eclipselink.jdbc.exclusive-connection.mode", IntPropertiesReader.getValueByKey( IntPropertiesReader.TRASACTIONAL ) );
-      properties.put( "eclipselink.jdbc.exclusive-connection.is-lazy", IntPropertiesReader.getValueByKey( IntPropertiesReader.ISLAZY ) );
-      EntityManagerFactory emf = Persistence.createEntityManagerFactory( persistenceUnitName, properties );
-      EntityManager em = emf.createEntityManager();
-      return em;
    }
 }
