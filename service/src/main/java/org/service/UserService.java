@@ -35,7 +35,7 @@ import org.model.User;
  *  A Renseigner.
  * 
  * @author  : ryan
- * @project : javaJaxws
+ * @project : personnel
  * @package : org.service
  * @date    : 4 sept. 2014 10:41:10
  */

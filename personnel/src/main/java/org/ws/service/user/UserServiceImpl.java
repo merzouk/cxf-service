@@ -37,7 +37,7 @@ import org.slf4j.LoggerFactory;
  * 
  * A Renseigner.
  * @author  : ryan
- * @project : javaJaxws
+ * @project : personnel
  * @package : org.server
  * @date    : 2 sept. 2014 22:57:31
  */

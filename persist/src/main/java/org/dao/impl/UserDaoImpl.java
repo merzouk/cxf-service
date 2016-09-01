@@ -44,7 +44,7 @@ import org.springframework.stereotype.Repository;
  *  A Renseigner.
  * 
  * @author  : ryan
- * @project : javaJaxws
+ * @project : persist
  * @package : org.dao.impl
  * @date    : 4 sept. 2014 10:40:15
  */

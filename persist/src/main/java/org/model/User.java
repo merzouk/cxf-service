@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * 
  * A Renseigner.
  * @author  : ryan
- * @project : javaJaxws
+ * @project : persist
  * @package : org.server
  * @date    : 2 sept. 2014 22:53:43
  */

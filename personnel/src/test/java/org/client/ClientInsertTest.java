@@ -36,7 +36,7 @@ import org.ws.service.user.UserService;
  * 
  * A Renseigner.
  * @author  : ryan
- * @project : javaJaxws
+ * @project : personnel
  * @package : org.client
  * @date    : 2 sept. 2014 23:13:20
  */

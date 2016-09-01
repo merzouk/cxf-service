@@ -40,7 +40,7 @@ import org.springframework.stereotype.Service;
  *  A Renseigner.
  * 
  * @author  : ryan
- * @project : javaJaxws
+ * @project : personnel
  * @package : org.service.impl
  * @date    : 4 sept. 2014 10:41:50
  */

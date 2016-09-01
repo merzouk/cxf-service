@@ -34,7 +34,7 @@ import org.model.Account;
  * 
  * A Renseigner.
  * @author  : ryan
- * @project : javaJaxws
+ * @project : service
  * @package : org.server
  * @date    : 2 sept. 2014 23:07:26
  */

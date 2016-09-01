@@ -40,7 +40,7 @@ import javax.persistence.Table;
  *  A Renseigner.
  * 
  * @author  : ryan
- * @project : javaJaxws
+ * @project : persist
  * @package : org.entity
  * @date    : 4 sept. 2014 11:50:31
  */
