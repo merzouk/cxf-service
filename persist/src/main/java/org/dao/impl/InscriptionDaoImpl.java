@@ -26,16 +26,11 @@ package org.dao.impl;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
 import org.dao.InscriptionDao;
-import org.dao.commons.IntPropertiesReader;
 import org.entity.InscriptionEntity;
 import org.exception.InscriptionException;
 import org.model.Inscription;
