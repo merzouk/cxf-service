@@ -7,10 +7,9 @@
 
 	<parent>
 		<groupId>com.org</groupId>
-		<artifactId>project</artifactId>
+		<artifactId>cxf-service</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	
 	<name>model module</name>
 	<artifactId>model</artifactId>
 	<packaging>jar</packaging>

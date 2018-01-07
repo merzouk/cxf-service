@@ -5,9 +5,9 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>org</groupId>
-		<artifactId>personnels</artifactId>
-		<version>1.0.0</version>
+		<groupId>com.org</groupId>
+		<artifactId>cxf-service</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>personnel</artifactId>
@@ -108,8 +108,16 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org</groupId>
+			<groupId>com.org</groupId>
 			<artifactId>service</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.org</groupId>
+			<artifactId>model</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.org</groupId>
+			<artifactId>persist</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.cxf</groupId>

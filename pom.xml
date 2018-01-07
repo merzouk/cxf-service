@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.org</groupId>
-	<artifactId>project</artifactId>
+	<artifactId>cxf-service</artifactId>
 	<packaging>pom</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>pom project</name>
@@ -11,7 +11,10 @@
 	<modules>
 		<module>repository</module>
 		<module>person</module>
+		<module>persist</module>
+		<module>personnel</module>
 		<module>serviceWeb</module>
+		<module>service</module>
 		<module>model</module>
 		<module>contrats</module>
 		<module>use-cases</module>
@@ -36,12 +39,22 @@
 			</dependency>
 			<dependency>
 				<groupId>com.org</groupId>
+				<artifactId>personnel</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.org</groupId>
 				<artifactId>repository</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.org</groupId>
 				<artifactId>serviceWeb</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.org</groupId>
+				<artifactId>service</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
@@ -64,6 +77,17 @@
 				<artifactId>commons</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>com.org</groupId>
+				<artifactId>contrats</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.org</groupId>
+				<artifactId>persist</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			
 
 			<!-- hsqldb -->
 			<dependency>

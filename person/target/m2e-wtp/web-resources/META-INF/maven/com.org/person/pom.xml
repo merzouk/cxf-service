@@ -7,9 +7,9 @@
 	<packaging>war</packaging>
 	<name>person module Webapp</name>
 
-	<parent>
+     <parent>
 		<groupId>com.org</groupId>
-		<artifactId>project</artifactId>
+		<artifactId>cxf-service</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 

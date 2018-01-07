@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-<<<<<<< HEAD
-	<name>archi_ognion</name>
-=======
-	<name>personnels</name>
->>>>>>> branch 'master' of https://github.com/merzouk/cxf-service.git
+	<name>cxf-service</name>
 	<comment></comment>
 	<projects>
 	</projects>
