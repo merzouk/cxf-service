@@ -87,7 +87,6 @@
 				<artifactId>persist</artifactId>
 				<version>${project.version}</version>
 			</dependency>
-			<!-- commentaire n   -->
 
 			<!-- hsqldb -->
 			<dependency>
