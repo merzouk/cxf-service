@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans  xmlns="http://www.springframework.org/schema/beans"
+	    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	    xmlns:jaxws="http://cxf.apache.org/jaxws"
+	    xmlns:soap="http://cxf.apache.org/bindings/soap"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		                    http://www.springframework.org/schema/beans/spring-beans.xsd 
+		                    http://cxf.apache.org/bindings/soap 
+		                    http://cxf.apache.org/schemas/configuration/soap.xsd 
+		                    http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+
+	<jaxws:server id="jaxwsUserService" serviceClass="org.ws.service.user.UserService"
+		address="/serviceUser">
+		<jaxws:serviceBean>
+			<bean class="org.ws.service.user.UserServiceImpl" />
+		</jaxws:serviceBean>
+	</jaxws:server>
+
+	<jaxws:server id="jaxwsInscriptionService"
+		serviceClass="org.ws.service.inscription.InscriptionService" address="/serviceInscription">
+		<jaxws:serviceBean>
+			<bean class="org.ws.service.inscription.InscriptionServiceImpl" />
+		</jaxws:serviceBean>
+	</jaxws:server>
+
+	<jaxws:server id="jaxwsCoursService" serviceClass="org.ws.service.cours.CoursService"
+		address="/serviceCours">
+		<jaxws:serviceBean>
+			<bean class="org.ws.service.cours.CoursServiceImpl" />
+		</jaxws:serviceBean>
+	</jaxws:server>
+
+	<jaxws:server id="jaxwsAccountService" serviceClass="org.ws.service.account.AccountService"
+		address="/serviceAccount">
+		<jaxws:serviceBean>
+			<bean class="org.ws.service.account.AccountServiceImpl" />
+		</jaxws:serviceBean>
+	</jaxws:server>
+</beans>
