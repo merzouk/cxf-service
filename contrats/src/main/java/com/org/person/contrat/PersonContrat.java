@@ -16,7 +16,7 @@ import com.org.contrat.ObjectContrat;
 public interface PersonContrat<T> extends ObjectContrat<T, Integer>
 {
    /**
-    * 
+    * find List by lastName
     * @param lastName
     * @return
     */
