@@ -104,7 +104,7 @@ public class PersonModel implements Serializable
    }
    
    /**
-    * @param courriel the courriel
+    * @param set courriel 
     */
    public void setCourriel( String courriel )
    {
