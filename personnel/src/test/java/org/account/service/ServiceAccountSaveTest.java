@@ -1,28 +1,3 @@
-/*
- *--------------------------------------------------------
- * Administrateur
- *--------------------------------------------------------
- * Project     : javaJaxws
- *
- * Copyright Administrateur,  All Rights Reserved.
- *
- * This software is the confidential and proprietary
- * information of Administrateur.
- * You shall not disclose such Confidential Information
- * and shall use it only in accordance with the terms
- * of the license agreement you entered into with
- * Administrateur.
- *-------------------------------------------------------- 
- * 
- * Fichier 		:	AccountSaveTest.java
- * Créé le 		: 	4 sept. 2014 à 13:20:54
- * Auteur		: 	ryan
- * 
- * Description 	:
- * 
- *---------------------------------------------------------
- */
-
 package org.account.service;
 
 import java.util.UUID;

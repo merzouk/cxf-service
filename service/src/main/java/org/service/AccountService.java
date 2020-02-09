@@ -1,27 +1,4 @@
-/*
- *--------------------------------------------------------
- * Administrateur
- *--------------------------------------------------------
- * Project     : service
- *
- * Copyright Administrateur,  All Rights Reserved.
- *
- * This software is the confidential and proprietary
- * information of Administrateur.
- * You shall not disclose such Confidential Information
- * and shall use it only in accordance with the terms
- * of the license agreement you entered into with
- * Administrateur.
- *-------------------------------------------------------- 
- * 
- * Fichier 		:	AccountService.java
- * Créé le 		: 	5 sept. 2014 à 20:45:16
- * Auteur		: 	ryan
- * 
- * Description 	:
- * 
- *---------------------------------------------------------
- */
+
 package org.service;
 
 import java.util.List;

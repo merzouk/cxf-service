@@ -1,28 +1,3 @@
-/*
- *--------------------------------------------------------
- * Administrateur
- *--------------------------------------------------------
- * Project     : javaJaxws
- *
- * Copyright Administrateur,  All Rights Reserved.
- *
- * This software is the confidential and proprietary
- * information of Administrateur.
- * You shall not disclose such Confidential Information
- * and shall use it only in accordance with the terms
- * of the license agreement you entered into with
- * Administrateur.
- *-------------------------------------------------------- 
- * 
- * Fichier 		:	UserDaoImpl.java
- * Créé le 		: 	4 sept. 2014 à 10:40:15
- * Auteur		: 	ryan
- * 
- * Description 	:
- * 
- *---------------------------------------------------------
- */
-
 package org.dao.impl;
 
 import java.util.ArrayList;

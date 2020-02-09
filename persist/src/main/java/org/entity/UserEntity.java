@@ -1,28 +1,3 @@
-/*
- *--------------------------------------------------------
- * Administrateur
- *--------------------------------------------------------
- * Project     : javaJaxws
- *
- * Copyright Administrateur,  All Rights Reserved.
- *
- * This software is the confidential and proprietary
- * information of Administrateur.
- * You shall not disclose such Confidential Information
- * and shall use it only in accordance with the terms
- * of the license agreement you entered into with
- * Administrateur.
- *-------------------------------------------------------- 
- * 
- * Fichier 		:	UserEntity.java
- * Créé le 		: 	4 sept. 2014 à 11:50:31
- * Auteur		: 	ryan
- * 
- * Description 	:
- * 
- *---------------------------------------------------------
- */
-
 package org.entity;
 
 import java.io.Serializable;
