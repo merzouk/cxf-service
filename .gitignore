@@ -1,3 +1,5 @@
 # ignore all files compiled
 *.class
 */target/pom.properties
+/persist/
+/.settings/
